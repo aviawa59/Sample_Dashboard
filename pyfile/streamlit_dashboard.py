@@ -16,7 +16,12 @@ if data_file is not None:
     st.subheader("📈 Basic Statistics")
     st.write(df.describe())
 
-    # hi iam creating the github settings 
+    if "Division" in df.columns:
+        st.subheader("Division Wise Consumer Count")
+        Division_Count = df.groupby("Division")["'Account ID'"].value_counts()
+        st.bar_chart(Division_Count)
+ 
+
 
 
 

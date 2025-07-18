@@ -18,7 +18,7 @@ if data_file is not None:
 
     if "Division" in df.columns:
         st.subheader("Division Wise Consumer Count")
-        Division_Count = df.groupby("Division")["'Account ID'"].value_counts()
+        Division_Count = df.groupby("Division")["Account ID"].value_counts()
         st.bar_chart(Division_Count)
  
 

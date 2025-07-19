@@ -16,10 +16,14 @@ if data_file is not None:
     st.subheader("📈 Basic Statistics")
     st.write(df.describe())
 
-    if "Division" in df.columns:
+    if "Division" in df.columns and "Account ID" in df.columns:
         st.subheader("Division Wise Consumer Count")
-        Division_Count = df.groupby("Division")["Account ID"].value_counts()
-        st.bar_chart(Division_Count)
+        Division_Count_df = (df.groupby("Division")["Account ID"].nunique.reset_index())
+        st.write(division_count_df)
+        st.bar_chart(data = Division_Count_df, x = "Division", y = "Account ID")
+    
+    else:
+        st.warning("Required columns 'Division' or 'Account ID' not found in the uploaded file")
  
 
 

@@ -21,7 +21,7 @@ if data_file is not None:
 
         Division_Count_df = (
             df.groupby("Division")["Account ID"]
-            .Count()
+            .count()
             .reset_index()
         )
 

@@ -21,7 +21,7 @@ if data_file is not None:
 
         Division_Count_df = (
             df.groupby("Division")["Account ID"]
-            .nunique()
+            .Count()
             .reset_index()
         )
 
@@ -30,3 +30,4 @@ if data_file is not None:
     
     else:
         st.warning("Required columns 'Division' or 'Account ID' not found in the uploaded file")
+                                                                                                                          

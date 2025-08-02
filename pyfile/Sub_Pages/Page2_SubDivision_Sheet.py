@@ -23,3 +23,5 @@ if data_file is not None:
 
     st.pyplot(fig)
 
+    # //create onde flde and connect to te  dtabse whatever it is and after fetch data we have to map 
+

@@ -4,7 +4,7 @@ import matplotlib.cm as cm
 import seaborn as sns
 import streamlit as st
 
-st.set_page_config(page_title = "KPTCL Dashboard", icon = "⚡", layout = 'wide')
+st.set_page_config(page_title = "KPTCL Dashboard" , layout = 'wide')
 st.title("GESCOM DASHBOARD")
 
 st.markdown(
